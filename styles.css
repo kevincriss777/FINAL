@@ -1,0 +1,369 @@
+
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #da2020;
+    --accent-color: #f88453;
+    --text-dark: #2C1810;
+    --text-light: #1148de;
+    --bg-light: #d2bc2c;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+}
+.skip-link:focus { top: 6px; }
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+    min-height: 100vh;
+    padding: 8px;
+    background: var(--bg-light);
+}
+
+.grid-section {
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.grid-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.div1 {
+    grid-column: span 5 / span 5;
+    background-image: url('https://postulantes.ucontinental.edu.pe/www/wp-content/uploads/2021/05/Como-inicio-mi-solicitud-de-convalidacion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.nav-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    flex: 1;
+    margin: 0 1rem;
+    max-width: 300px;
+}
+.nav-card:hover, .nav-card:focus {
+    background: rgba(255,255,255,0.2);
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+.nav-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+.nav-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: bold; }
+.nav-card p { font-size: 0.9rem; opacity: 0.9; }
+
+.div2 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 2;
+    background: linear-gradient(rgba(239, 238, 238, 0.6),rgba(0,0,0,0.6)), url('https://contemplatiosocial.wordpress.com/wp-content/uploads/2020/10/lol.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.faculty-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.faculty-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    padding: 1.5rem;
+}
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    background: rgba(0,0,0,0.3);
+}
+.video-placeholder {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.video-placeholder i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.video-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem; }
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background: white;
+    color: var(--text-dark);
+    padding: 1.5rem;
+    text-align: left;
+    border-left: 4px solid var(--secondary-color);
+}
+.program-description h3 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 1rem; font-weight: bold; }
+.program-description p { margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem; }
+.program-highlights { list-style: none; padding: 0; }
+.program-highlights li {
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.program-highlights li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.background-machu {
+    background-image: url('https://content-historia.nationalgeographic.com.es/medio/2023/07/21/machu-picchu-peru_00000000_72015b86_230721112545_550x807.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: white;
+}
+
+
+.div5 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 1.5rem;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+.program-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+    transform: rotate(180deg);
+}
+.program-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+    transform: rotate(180deg);
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-row-start: 6;
+    background: rgb(106, 70, 227);
+    color: var(--text-dark);
+    padding: 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+}
+.inscription-form h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(218,165,32,0.2);
+}
+.btn-submit {
+    background: var(--secondary-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+.btn-submit:hover, .btn-submit:focus {
+    background: #ed1536;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.div7 {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 3;
+    grid-row-start: 6;
+    background: linear-gradient(135deg, var(--secondary-color), #B8860B);
+    color: var(--text-dark);
+    padding: 1.5rem;
+}
+.welcome-video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+}
+.welcome-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+.welcome-video-placeholder {
+    text-align: center;
+    color: var(--text-dark);
+}
+.welcome-video-placeholder i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.welcome-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center; }
+.welcome-subtitle { font-size: 1rem; opacity: 0.8; text-align: center; }
+
+@media (max-width: 768px) {
+    .parent { grid-template-columns: 1fr; grid-template-rows: auto; gap: 1rem; padding: 1rem; }
+    .div1, .div2, .div3, .div4, .div5, .div6, .div7 {
+        grid-column: 1/-1 !important;
+        grid-row: auto !important;
+        min-height: 200px;
+    }
+    .div1 { flex-direction: column; padding: 1rem; }
+    .nav-card { margin: 0.5rem 0; max-width: 100%; }
+    .faculty-title { font-size: 2rem; }
+    .div5 { writing-mode: horizontal-tb; text-orientation: unset; }
+    .program-title, .program-subtitle { transform: none; }
+    .program-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+    .parent { padding: 0.5rem; gap: 0.5rem; }
+    .grid-section { padding: 1rem; min-height: 150px; }
+    .faculty-title { font-size: 1.5rem; }
+    .faculty-subtitle { font-size: 1rem; }
+    .nav-card h3 { font-size: 1.1rem; }
+    .nav-card p { font-size: 0.8rem; }
+    .form-group input, .form-group select { padding: 0.5rem; font-size: 0.85rem; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out; }
+
+.nav-card:focus, .btn-submit:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.form-group input:invalid { border-color: #dc3545; }
+.form-group input:valid { border-color: #28a745; }
+.error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+.success-message {
+    color: #28a745;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}

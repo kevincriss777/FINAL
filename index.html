@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diplomado en Culturas Preincaicas - Facultad de Ciencias Sociales</title>
+    <meta name="description" content="Descubre las fascinantes culturas preincaicas del Perú. Diplomado especializado en Chavín, Mochica, Nazca y mas." />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <main id="main-content" class="parent" role="main">
+
+        <!-- Div 1 -->
+        <section class="div1 grid-section" aria-labelledby="nav-title">
+            <h2 id="nav-title" class="visually-hidden">Navegación principal</h2>
+            <a href="sedes.html" class="nav-card" role="button" aria-describedby="nav-sedes-desc">
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                <h3>Sedes</h3>
+                <p id="nav-sedes-desc">Conoce nuestras sedes en nuestro pais</p>
+            </a>
+            <a href="informacion.html" class="nav-card" role="button" aria-describedby="nav-academica-desc">
+                <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+                <h3>Información Academica</h3>
+                <p id="nav-academica-desc">plan de estudios y duracion de los  programas</p>
+            </a>
+        </section>
+
+        <!-- Div 2 -->
+        <section class="div2 grid-section" aria-labelledby="faculty-title">
+            <h1 id="faculty-title" class="faculty-title">Facultad de Ciencias Sociales</h1>
+            <p class="faculty-subtitle">Universidad Continental </p>
+        </section>
+
+        <!-- Div 3 -->
+        <section class="div3 grid-section" aria-labelledby="video-title">
+            <div class="video-container" role="img" aria-label="Video promocional del programa">
+                <video src="videos/202507061454.mp4"controls></video>
+                <div class="video-placeholder">
+                    <i class="bi bi-play-circle-fill" aria-hidden="true"></i>
+                    <p>Video del Programa</p>
+                </div>
+            </div>
+            <h3 id="video-title" class="video-title">Descubre las Culturas Preincaicas</h3>
+            <p>Conoce más sobre nuestro programa especializado</p>
+        </section>
+
+        <!-- Div 4 -->
+        <section class="div4 grid-section-section background-machu" aria-labelledby="program-desc-title">
+            <div class="program-description">
+                <h3 id="program-desc-title">Nuevo Programa Académico</h3>
+                <p><strong>Diplomado en Culturas Preincaicas</strong> - Un programa innovador que te permitirá explorar las fascinantes civilizaciones que florecieron en el Perú antes del Imperio Inca.</p>
+                <ul class="program-highlights">
+                    <li>Metodología teórico-práctica</li>
+                    <li>Visitas a sitios arqueológicos</li>
+                    <li>Docentes especializados</li>
+                    <li>Certificación oficial</li>
+                    <li>Modalidad presencial y virtual</li>
+                </ul>
+                <p><strong>Duración:</strong> 6 meses<br/><strong>Inicio:</strong> Agosto 2025</p>
+            </div>
+        </section>
+
+        <!-- Div 5 -->
+        <section class="div5 grid-section" aria-labelledby="program-main-title">
+            <h2 id="program-main-title" class="program-title">CULTURAS PREINCAICAS</h2>
+            <p class="program-subtitle">Diplomado Especializado</p>
+        </section>
+
+        <!-- Div 6 -->
+        <section class="div6 grid-section" aria-labelledby="inscription-title">
+            <form class="inscription-form" id="inscriptionForm" novalidate>
+                <h3 id="inscription-title">Preinscripción</h3>
+                <div class="form-group">
+                    <label for="fullName">Nombre completo *</label>
+                    <input type="text" id="fullName" name="fullName" required aria-describedby="fullName-error" autocomplete="name"/>
+                    <div id="fullName-error" class="error-message" role="alert"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-error" autocomplete="email"/>
+                    <div id="email-error" class="error-message" role="alert"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" name="phone" required aria-describedby="phone-error" autocomplete="tel"/>
+                    <div id="phone-error" class="error-message" role="alert"></div>
+                </div>
+                <div class="form-group">
+                    <label for="modality">Modalidad *</label>
+                    <select id="modality" name="modality" required aria-describedby="modality-error">
+                        <option value="">Seleccionar modalidad</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="virtual">Virtual</option>
+                        <option value="hibrida">Híbrida</option>
+                    </select>
+                    <div id="modality-error" class="error-message" role="alert"></div>
+                </div>
+                <button type="submit" class="btn-submit" aria-describedby="submit-desc">
+                    <i class="bi bi-person-plus me-2" aria-hidden="true"></i>
+                    Preinscribirse
+                </button>
+                <p id="submit-desc" class="visually-hidden">Al enviar el formulario, recibirás información detallada sobre el programa</p>
+                <div class="success-message" role="alert" aria-live="polite">
+                    ¡Preinscripción exitosa! Te contactaremos pronto.
+                </div>
+            </form>
+        </section>
+
+        <!-- Div 7 -->
+        <section class="div7 grid-section" aria-labelledby="welcome-title">
+            <div class="welcome-video" role="img" aria-label="Video de bienvenida">
+                <iframe src="https://www.youtube.com/embed/DSaqpg8ktrg" 
+                        title="Video de Bienvenida" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        aria-label="Video de bienvenida del programa">
+                </iframe>
+            </div>
+            <h3 id="welcome-title" class="welcome-title">¡Bienvenido!</h3>
+            
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
